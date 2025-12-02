@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monchichi Dress‑Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- STARTSCREEN -->
+  <section id="startScreen" class="screen">
+    <h1>Monchichi Dress‑Up</h1>
+    <p>Zieh deinem Monchichi coole Outfits an!</p>
+    <button id="startBtn" class="big">Start</button>
+  </section>
+
+  <!-- GAME -->
+  <section id="gameScreen" class="screen hidden">
+    <div id="room" class="room">
+      <img id="roomBg" src="assets/room.svg" alt="Zimmer Hintergrund" />
+      <div id="stage">
+        <div id="monchichiWrap">
+          <img id="monchichi" src="assets/monchichi.svg" alt="Monchichi" draggable="false" />
+          <!-- container für angelegte Kleidungsstücke (positioned absolute over monchichi) -->
+          <div id="outfitLayer"></div>
+        </div>
+      </div>
+
+      <aside id="panel">
+        <h2>Garderobe</h2>
+        <div class="category">
+          <h3>Oberteile</h3>
+          <div class="items" id="tops"></div>
+        </div>
+        <div class="category">
+          <h3>Unterteile</h3>
+          <div class="items" id="bottoms"></div>
+        </div>
+        <div class="category">
+          <h3>Hüte</h3>
+          <div class="items" id="hats"></div>
+        </div>
+        <div class="category">
+          <h3>Schuhe</h3>
+          <div class="items" id="shoes"></div>
+        </div>
+
+        <div class="controls">
+          <button id="clearBtn">Alles ausziehen</button>
+          <button id="doneBtn">Fertig</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ENDSCREEN -->
+  <section id="endScreen" class="screen hidden">
+    <h2>Fertig!</h2>
+    <p id="endMsg"></p>
+    <div id="finalPreview"></div>
+    <button id="restartBtn" class="big">Nochmal</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
